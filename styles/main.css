@@ -86,7 +86,6 @@
   color: #45516d;
   text-align: center;
   box-shadow: 10px 10px 6px rgba(255, 255, 255, 0.1607843137);
-  transition: color 0.3s ease;
 }
 .container .packages--mode--purchase:hover, .container .packages--mode--subscribe:hover {
   color: #3a61a0;
