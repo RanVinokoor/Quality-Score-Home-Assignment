@@ -46,7 +46,6 @@
   font-size: 24px;
   font-weight: 700;
   color: #9a9b9c;
-  transition: color 0.3s ease;
 }
 .container .packages--number--1:hover, .container .packages--number--3:hover, .container .packages--number--6:hover {
   color: #3a61a0;
