@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quality Score - Home Assignment</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="packages">
+            <h1 class="packages--title">CHOOSE YOUR PACKAGE</h1>
+            <div class="packages--number">
+                <div onclick="onePackage()" id="one-package" class="packages--number--1">1</div>
+                <div onclick="threePackage()" id="three-package" class="packages--number--3 active">3</div>
+                <div onclick="sixPackage()" id="six-package" class="packages--number--6">6</div>
+            </div>
+            <div class="packages--mode">
+                <div onclick="purchaseMode()" id="purchase-mode" class="packages--mode--purchase active"><p>One-Time Purchase</p></div>
+                <div onclick="subscribeMode()" id="subscribe-mode" class="packages--mode--subscribe"><p>Subscribe & Save More</p></div>
+            </div>
+        </div>
+        <div class="disclaimer" id="disclaimer">
+            <input onclick="validate()" class="checkbox" id="checkbox" type="checkbox" name="disclaimer" value="disclaimer" />
+            <label for="disclaimer">Yes! I want to Subscribe & Save</label>
+            <p class="disclaimer--text">By checking the "Yes" box above, you agree to receive "Dermal Repair Complex" once per month and that your credit card will be charged the amount matching your selected package size, billed to your card as "Beverly Hills MD". You can stop shipments anytime by calling customer service at <span>(877) 828-5528</span> from 6am to 6pm PST. (<span>All terms and conditions apply</span>)</p>
+        </div>
+        <div class="product">
+            <div class="product--badge">
+                <p>Best <br> Seller</p>
+                <img class="product--badge--wavy" src="./img/wavy-border.svg">
+            </div>
+            <img class="product--image" src="./img/3pack.png">
+        </div>
+        <div class="price">
+            <p class="price--main">
+                <input type="text" id="price-main" value="" />
+            </p>
+            <p class="price--retail">Retail Price 
+                <input type="text" id="price-retail" value="" />
+            </p>
+            <p class="price--savings">Instant Savings 
+                <input type="text" id="price-savings" value="" />
+            </p>
+            <p class="price--shipping">FREE US SHIPPING</p>
+        </div>
+        <div class="cta">
+            <button class="cta--btn" id="cta-btn">BUY NOW</button>
+        </div>
+        <div class="advantages">
+            <div class="advantages--manufactured">
+                <img src="./img/united-states-of-america.svg">
+                <p>Manufactured in USA</p>
+            </div>
+            <div class="advantages--shipment">
+                <img src="./img/delivery-truck.svg">
+                <p>Door to door</p>
+            </div>
+        </div>
+        <div class="guarantee">
+            <img src="./img/90days.png">
+            <p class="guarantee--order">Your order is backed by our 90-day money-back guarantee.</p>
+            <p class="guarantee--refund">We are confident you'll love it. So if you're not completely satisfied for any reason, just send it back for a full refund!</p>
+            <p class="guarantee--shipping">(Not including return shipping)</p>
+        </div>
+    </div>
+    <div class="background">
+      <div class="background--main"></div>
+      <img class="background--left" src="./img/leaves_left.png">
+      <img class="background--right" src="./img/leaves_right.png">
+      <div class="overlay"></div>
+    </div>
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>
