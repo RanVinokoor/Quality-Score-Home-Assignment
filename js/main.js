@@ -14,10 +14,7 @@ var priceRetail = document.getElementById("price-retail");
 var priceSavings = document.getElementById("price-savings");
 
 // Click events
-onePackageBtn.addEventListener("click", () => {
-  onePackage();
-});
-
+onePackageBtn.addEventListener("click", onePackage);
 threePackageBtn.addEventListener("click", threePackage);
 sixPackageBtn.addEventListener("click", sixPackage);
 purchaseModeBtn.addEventListener("click", purchaseMode);
