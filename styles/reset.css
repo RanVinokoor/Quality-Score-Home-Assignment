@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
 }/*# sourceMappingURL=reset.css.map */
