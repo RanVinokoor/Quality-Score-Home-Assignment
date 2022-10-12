@@ -19,7 +19,6 @@ threePackageBtn.addEventListener("click", threePackage);
 sixPackageBtn.addEventListener("click", sixPackage);
 purchaseModeBtn.addEventListener("click", purchaseMode);
 subscribeModeBtn.addEventListener("click", subscribeMode);
-
 checkboxBtn.addEventListener("click", () => {
   validate(checkboxBtn, ctaBtn);
 });
