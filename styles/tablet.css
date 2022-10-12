@@ -1,0 +1,29 @@
+@media only screen and (max-width: 768px) {
+  body .container {
+    padding: 40px 0 0;
+  }
+  body .container .packages--mode--purchase p, body .container .packages--mode--subscribe p {
+    line-height: 17px;
+  }
+  body .container .product--image {
+    max-width: 375px;
+  }
+  body .container .guarantee {
+    margin: 43px 20px 33px;
+  }
+  body .background--main {
+    background-image: url(../img/fixed_bg_tablet.png);
+  }
+  body .background--left {
+    width: 46vw;
+    min-width: 200px;
+    top: 3px;
+    left: -23vw;
+  }
+  body .background--right {
+    width: 42vw;
+    min-width: 200px;
+    top: 96px;
+    right: -15vw;
+  }
+}/*# sourceMappingURL=tablet.css.map */

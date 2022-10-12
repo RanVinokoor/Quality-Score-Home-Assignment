@@ -1,0 +1,48 @@
+@media only screen and (max-width:768px) {
+  body {
+    .container {
+      padding: 40px 0 0;
+
+      .packages {
+        &--mode {
+          &--purchase,
+          &--subscribe {
+            p {
+              line-height: 17px;
+            }
+          }
+        }
+      }
+
+      .product {
+        &--image {
+          max-width: 375px;
+        }
+      }
+
+      .guarantee {
+        margin: 43px 20px 33px;
+      }
+    }
+
+    .background {
+      &--main {
+        background-image: url(../img/fixed_bg_tablet.png);
+      }
+
+      &--left {
+        width: 46vw;
+        min-width: 200px;
+        top: 3px;
+        left: -23vw;
+      }
+        
+      &--right {
+        width: 42vw;
+        min-width: 200px;
+        top: 96px;
+        right: -15vw;
+      }
+    }
+  }
+}

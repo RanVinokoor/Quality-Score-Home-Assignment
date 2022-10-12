@@ -1,31 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap');
-
-$primary-color: #3a61a0;
-$secondary-color: #45516d;
-$white-color: #fff;
-$green-color: #7fb457;
-$gray-color:#9a9b9c;
-$box-shadow-color: #ffffff29;
-$border-color: #9da4bc;
-$fw-regular: 400;
-$fw-semibold: 600;
-$fw-bold: 700;
-$fw-extra-bold: 800;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-}
-
-body {
-  -webkit-tap-highlight-color: transparent;
-}
+@import 'reset';
+@import 'variables';
+@import 'tablet';
+@import 'mobile';
 
 .container {
   position: relative;
-  font-family: 'Assistant', sans-serif;
+  font-family: $primary-font;
   padding: 60px 0 0;
   z-index: 1;
 
@@ -193,32 +173,15 @@ body {
     text-align: center;
     margin-top: 48px;
 
-    &--badge {
+    &--stamp {
       position: absolute;
-      left: 75px;
-      top: -8px;
-      width: 70px;
-      height: 70px;
-      font-size: 18px;
-      line-height: 20px;
-      color: $secondary-color;
-      font-weight: $fw-extra-bold;
-      transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
-      background-color: #eaaca0;
-      border-radius: 75px;
-      padding-top: 14px;
-
-      &--wavy {
-        position: absolute;
-        width: 169px;
-        top: -19px;
-        left: -22px;
-      }
+      left: 54px;
+      top: -28px;
     }
 
     &--image {
       max-width: 386px;
-      width: 100%;
+      max-height: 244px;
     }
   }
 
@@ -260,7 +223,7 @@ body {
     }
 
     input {
-      font-family: 'Assistant';
+      font-family: $primary-font;
       font-weight: $fw-bold;
       border: none;
       outline: none;
@@ -273,15 +236,15 @@ body {
     text-align: center;
 
     &--btn {
-      font-family: 'Assistant';
+      font-family: $primary-font;
       max-width: 344px;
       width: 100%;
       height: 58px;
       font-size: 32px;
       font-weight: 700;
       text-align: center;
-      color: #fff;
-      background-color: #7fb457;
+      color: $white-color;
+      background-color: $green-color;
       border-radius: 29px;
       border: none;
       margin: 18px auto 47px;
@@ -293,6 +256,16 @@ body {
         transition: all 0.3s ease;
       }
     }
+  }
+
+  .cta-disabled {
+    pointer-events: none;
+    background-color: $gray-color;
+  }
+  
+  .cta-enabled {
+    pointer-events: unset;
+    background-color: $green-color;
   }
 
   .advantages {
@@ -348,6 +321,10 @@ body {
       color: $gray-color;
     }
   }
+
+  .display-none {
+    display: none;
+  }
 }
 
 .background {
@@ -390,106 +367,5 @@ body {
     height: 100%;
     bottom: 0;
     background: linear-gradient(0deg, hsl(0deg, 0%, 100%) 0%, hsla(0deg, 0%, 100%, 0) 37%);
-  }
-}
-
-/* ---------------------------- Tablet ---------------------------- */
-@media only screen and (max-width:768px) {
-  .container {
-    padding: 40px 0 0;
-
-    .packages {
-      &--mode {
-        &--purchase,
-        &--subscribe {
-          p {
-            line-height: 17px;
-          }
-        }
-      }
-    }
-
-    .guarantee {
-      margin: 43px 20px 33px;
-    }
-  }
-
-  .background {
-    &--main {
-      background-image: url(../img/fixed_bg_tablet.png);
-    }
-
-    &--left {
-      width: 46vw;
-      min-width: 200px;
-      top: 3px;
-      left: -23vw;
-    }
-    
-    &--right {
-      width: 42vw;
-      min-width: 200px;
-      top: 96px;
-      right: -15vw;
-    }
-  }
-}
-
-/* ---------------------------- Mobile ---------------------------- */
-@media only screen and (max-width:375px) {
-  .container {
-    padding: 30px 0 0;
-
-    .packages {
-      margin: 0 15px;
-
-      &--mode {
-        &--purchase,
-        &--subscribe {
-          p {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-
-    .disclaimer {
-      max-width: 100%;
-    }
-
-    .product {
-      &--badge {
-        top: -24px;
-        left: 17vw;
-      }
-    }
-
-    .cta {
-      margin: 18px 15px 0;
-    }
-
-    .guarantee {
-      margin: 43px 15px 23px;
-    }
-  }
-
-  .background {
-    &--main {
-      background-image: url(../img/fixed_bg_mobile.png);
-    }
-
-    &--left {
-      width: 227px;
-      min-width: unset;
-      top: 156px;
-      left: -138px;
-    }
-    
-    &--right {
-      width: 182px;
-      min-width: unset;
-      top: 233px;
-      right: -87px;
-    }
   }
 }

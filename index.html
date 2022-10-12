@@ -14,26 +14,23 @@
         <div class="packages">
             <h1 class="packages--title">CHOOSE YOUR PACKAGE</h1>
             <div class="packages--number">
-                <div onclick="onePackage()" id="one-package" class="packages--number--1">1</div>
-                <div onclick="threePackage()" id="three-package" class="packages--number--3 active">3</div>
-                <div onclick="sixPackage()" id="six-package" class="packages--number--6">6</div>
+                <div class="packages--number--1" id="one-package">1</div>
+                <div class="packages--number--3 active" id="three-package">3</div>
+                <div class="packages--number--6" id="six-package">6</div>
             </div>
             <div class="packages--mode">
-                <div onclick="purchaseMode()" id="purchase-mode" class="packages--mode--purchase active"><p>One-Time Purchase</p></div>
-                <div onclick="subscribeMode()" id="subscribe-mode" class="packages--mode--subscribe"><p>Subscribe & Save More</p></div>
+                <div class="packages--mode--purchase active" id="purchase-mode"><p>One-Time Purchase</p></div>
+                <div class="packages--mode--subscribe" id="subscribe-mode"><p>Subscribe & Save More</p></div>
             </div>
         </div>
         <div class="disclaimer" id="disclaimer">
-            <input onclick="validate()" class="checkbox" id="checkbox" type="checkbox" name="disclaimer" value="disclaimer" />
+            <input class="checkbox" id="checkbox" type="checkbox" name="disclaimer" value="disclaimer" />
             <label for="disclaimer">Yes! I want to Subscribe & Save</label>
             <p class="disclaimer--text">By checking the "Yes" box above, you agree to receive "Dermal Repair Complex" once per month and that your credit card will be charged the amount matching your selected package size, billed to your card as "Beverly Hills MD". You can stop shipments anytime by calling customer service at <span>(877) 828-5528</span> from 6am to 6pm PST. (<span>All terms and conditions apply</span>)</p>
         </div>
         <div class="product">
-            <div class="product--badge">
-                <p>Best <br> Seller</p>
-                <img class="product--badge--wavy" src="./img/wavy-border.svg">
-            </div>
-            <img class="product--image" src="./img/3pack.png">
+            <img class="product--stamp" id="product-stamp" src="">
+            <img class="product--image" id="product-image" src="">
         </div>
         <div class="price">
             <p class="price--main">

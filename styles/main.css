@@ -3,16 +3,85 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 body {
   -webkit-tap-highlight-color: transparent;
 }
 
+@media only screen and (max-width: 768px) {
+  body .container {
+    padding: 40px 0 0;
+  }
+  body .container .packages--mode--purchase p, body .container .packages--mode--subscribe p {
+    line-height: 17px;
+  }
+  body .container .product--image {
+    max-width: 375px;
+  }
+  body .container .guarantee {
+    margin: 43px 20px 33px;
+  }
+  body .background--main {
+    background-image: url(../img/fixed_bg_tablet.png);
+  }
+  body .background--left {
+    width: 46vw;
+    min-width: 200px;
+    top: 3px;
+    left: -23vw;
+  }
+  body .background--right {
+    width: 42vw;
+    min-width: 200px;
+    top: 96px;
+    right: -15vw;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body .container {
+    padding: 30px 0 0;
+  }
+  body .container .packages {
+    margin: 0 15px;
+  }
+  body .container .packages--mode--purchase p, body .container .packages--mode--subscribe p {
+    font-size: 14px;
+  }
+  body .container .disclaimer {
+    max-width: 100%;
+  }
+  body .container .product--stamp {
+    left: 10vw;
+    top: -41px;
+  }
+  body .container .product--image {
+    width: auto;
+    max-width: 100%;
+    max-height: 237px;
+  }
+  body .container .cta {
+    margin: 18px 15px 0;
+  }
+  body .container .guarantee {
+    margin: 43px 15px 23px;
+  }
+  body .background--main {
+    background-image: url(../img/fixed_bg_mobile.png);
+  }
+  body .background--left {
+    width: 227px;
+    min-width: unset;
+    top: 156px;
+    left: -138px;
+  }
+  body .background--right {
+    width: 182px;
+    min-width: unset;
+    top: 233px;
+    right: -87px;
+  }
+}
 .container {
   position: relative;
   font-family: "Assistant", sans-serif;
@@ -161,30 +230,14 @@ body {
   text-align: center;
   margin-top: 48px;
 }
-.container .product--badge {
+.container .product--stamp {
   position: absolute;
-  left: 75px;
-  top: -8px;
-  width: 70px;
-  height: 70px;
-  font-size: 18px;
-  line-height: 20px;
-  color: #45516d;
-  font-weight: 800;
-  transform: matrix(0.94, -0.34, 0.34, 0.94, 0, 0);
-  background-color: #eaaca0;
-  border-radius: 75px;
-  padding-top: 14px;
-}
-.container .product--badge--wavy {
-  position: absolute;
-  width: 169px;
-  top: -19px;
-  left: -22px;
+  left: 54px;
+  top: -28px;
 }
 .container .product--image {
   max-width: 386px;
-  width: 100%;
+  max-height: 244px;
 }
 .container .price {
   font-weight: 700;
@@ -211,7 +264,7 @@ body {
   color: #7fb457;
 }
 .container .price input {
-  font-family: "Assistant";
+  font-family: "Assistant", sans-serif;
   font-weight: 700;
   border: none;
   outline: none;
@@ -222,7 +275,7 @@ body {
   text-align: center;
 }
 .container .cta--btn {
-  font-family: "Assistant";
+  font-family: "Assistant", sans-serif;
   max-width: 344px;
   width: 100%;
   height: 58px;
@@ -240,6 +293,14 @@ body {
 .container .cta--btn:hover {
   filter: brightness(1.12);
   transition: all 0.3s ease;
+}
+.container .cta-disabled {
+  pointer-events: none;
+  background-color: #9a9b9c;
+}
+.container .cta-enabled {
+  pointer-events: unset;
+  background-color: #7fb457;
 }
 .container .advantages {
   margin: auto;
@@ -281,6 +342,9 @@ body {
   font-size: 14px;
   color: #9a9b9c;
 }
+.container .display-none {
+  display: none;
+}
 
 .background {
   position: absolute;
@@ -316,72 +380,4 @@ body {
   height: 100%;
   bottom: 0;
   background: linear-gradient(0deg, hsl(0deg, 0%, 100%) 0%, hsla(0deg, 0%, 100%, 0) 37%);
-}
-
-/* ---------------------------- Tablet ---------------------------- */
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 40px 0 0;
-  }
-  .container .packages--mode--purchase p, .container .packages--mode--subscribe p {
-    line-height: 17px;
-  }
-  .container .guarantee {
-    margin: 43px 20px 33px;
-  }
-  .background--main {
-    background-image: url(../img/fixed_bg_tablet.png);
-  }
-  .background--left {
-    width: 46vw;
-    min-width: 200px;
-    top: 3px;
-    left: -23vw;
-  }
-  .background--right {
-    width: 42vw;
-    min-width: 200px;
-    top: 96px;
-    right: -15vw;
-  }
-}
-/* ---------------------------- Mobile ---------------------------- */
-@media only screen and (max-width: 375px) {
-  .container {
-    padding: 30px 0 0;
-  }
-  .container .packages {
-    margin: 0 15px;
-  }
-  .container .packages--mode--purchase p, .container .packages--mode--subscribe p {
-    font-size: 14px;
-  }
-  .container .disclaimer {
-    max-width: 100%;
-  }
-  .container .product--badge {
-    top: -24px;
-    left: 17vw;
-  }
-  .container .cta {
-    margin: 18px 15px 0;
-  }
-  .container .guarantee {
-    margin: 43px 15px 23px;
-  }
-  .background--main {
-    background-image: url(../img/fixed_bg_mobile.png);
-  }
-  .background--left {
-    width: 227px;
-    min-width: unset;
-    top: 156px;
-    left: -138px;
-  }
-  .background--right {
-    width: 182px;
-    min-width: unset;
-    top: 233px;
-    right: -87px;
-  }
 }/*# sourceMappingURL=main.css.map */

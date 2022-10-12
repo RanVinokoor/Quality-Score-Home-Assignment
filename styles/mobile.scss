@@ -1,0 +1,65 @@
+@media only screen and (max-width:375px) {
+  body {
+    .container {
+      padding: 30px 0 0;
+
+      .packages {
+        margin: 0 15px;
+
+        &--mode {
+          &--purchase,
+          &--subscribe {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .disclaimer {
+        max-width: 100%;
+      }
+
+      .product {
+        &--stamp {
+          left: 10vw;
+          top: -41px;
+        }
+
+        &--image {
+          width: auto;
+          max-width: 100%;
+          max-height: 237px;
+        }
+      }
+
+      .cta {
+        margin: 18px 15px 0;
+      }
+
+      .guarantee {
+        margin: 43px 15px 23px;
+      }
+    }
+
+    .background {
+      &--main {
+        background-image: url(../img/fixed_bg_mobile.png);
+      }
+
+      &--left {
+        width: 227px;
+        min-width: unset;
+        top: 156px;
+        left: -138px;
+      }
+        
+      &--right {
+        width: 182px;
+        min-width: unset;
+        top: 233px;
+        right: -87px;
+      }
+    }
+  }
+}
