@@ -160,6 +160,7 @@ function inputWidth() {
   }
 }
 
+// Updated prices
 function updatePrice() {
   var updatedMainPrice = parseInt(priceMain.value.replace("$", ""));
   var updatedRetailPrice = parseInt(priceRetail.value.replace("$", ""));
